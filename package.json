@@ -1,7 +1,7 @@
 {
   "name": "@fibjs/statuses",
   "description": "HTTP status utility based on fibjs",
-  "version": "1.2.1",
+  "version": "1.2.7",
   "author": {
     "name": "Jonathan Ong",
     "email": "me@jongleberry.com",
@@ -21,6 +21,10 @@
     "LICENSE"
   ],
   "scripts": {
+    "postinstall": "ln -s ./node_modules ./.modules",
     "test": "fibjs test/test.js"
+  },
+  "dependencies": {
+    "@fibjs/http-status-codes": "^1.0.0"
   }
 }
