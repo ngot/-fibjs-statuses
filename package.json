@@ -1,6 +1,6 @@
 {
-  "name": "statuses",
-  "description": "HTTP status utility",
+  "name": "@fibjs/statuses",
+  "description": "HTTP status utility based on fibjs",
   "version": "1.2.1",
   "author": {
     "name": "Jonathan Ong",
@@ -8,7 +8,6 @@
     "url": "http://jongleberry.com",
     "twitter": "https://twitter.com/jongleberry"
   },
-  "repository": "jshttp/statuses",
   "license": "MIT",
   "keywords": [
     "http",
@@ -18,19 +17,10 @@
   "files": [
     "index.js",
     "codes.json",
+    ".modules",
     "LICENSE"
   ],
-  "devDependencies": {
-    "csv-parse": "0.0.6",
-    "istanbul": "0.3.5",
-    "mocha": "~1.21.5",
-    "stream-to-array": "2"
-  },
   "scripts": {
-    "build": "node scripts/build.js",
-    "update": "node scripts/update.js",
-    "test": "mocha --reporter spec --check-leaks --bail test/",
-    "test-ci": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter spec --check-leaks test/",
-    "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --reporter dot --check-leaks test/"
+    "test": "fibjs test/test.js"
   }
 }

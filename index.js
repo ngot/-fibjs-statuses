@@ -1,5 +1,4 @@
-
-var codes = require('./codes.json');
+var codes = require('@fibjs/http-status-codes');
 
 module.exports = status;
 

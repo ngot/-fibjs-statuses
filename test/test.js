@@ -1,18 +1,11 @@
-
 var assert = require('assert')
+var test = require('test')
 
-var status = require('..')
+test.setup()
+
+var status = require('index.js')
 
 describe('Statuses', function () {
-  describe('codes', function () {
-    it('should include all of node\'s', function () {
-      var codes = require('http').STATUS_CODES
-      Object.keys(codes).forEach(function (code) {
-        assert(status(code))
-      })
-    })
-  })
-
   describe('.redirect', function () {
     it('should include 308', function () {
       assert(status.redirect[308])
@@ -63,3 +56,5 @@ describe('Statuses', function () {
     })
   })
 })
+
+test.run()
